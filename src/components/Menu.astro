@@ -1,0 +1,78 @@
+<header class="container-nav">
+    <nav class="navegador">
+        <h1 class="logo">レベリングのみ</h1>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/info/historia">HISTORIA</a></li>
+            <li><a href="/#Habilidades">HABILIDADES</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    .logo {
+        font-family: "Times New Roman", Times, serif;
+        text-shadow: 3px 3px blue;
+        -webkit-text-stroke-color: #bbb5b5;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .container-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .navegador {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-weight: bold;
+        background-color: #ffffdd;
+    
+    
+    }
+    nav li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+
+    nav li a {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        text-shadow: 2px 2px rgb(168, 168, 250);
+        -webkit-text-stroke-color: aliceblue;
+        -webkit-text-stroke-width: 1px;
+        color: black;
+        text-decoration: none;
+    }
+
+    nav li a:hover {
+        color: aqua;
+    }
+
+    @media (max-width: 900px) {
+        .container-nav {
+            position: sticky;
+        }
+
+        .navegador {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navegador ul {
+            display: flex;
+            margin-right: 8%;
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+</style>

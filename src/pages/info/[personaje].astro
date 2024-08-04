@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {personajes} from '../../tools/personajes'
+
+export function getStaticPaths() {
+    return [
+        { params: { personaje: "ChaHae-in" } },
+        { params: { personaje: "rover" } },
+        { params: { personaje: "spot" } },
+    ];
+}
+const { personaje } = Astro.params;
+---
+
+<Layout title={`personaje ${personaje}`}>
+    <section>
+        {personaje}
+        {
+            personajes.map(
+                personaje=>(
+                    <li>{personaje}</li>
+                )
+            )
+        }
+    </section>
+</Layout>

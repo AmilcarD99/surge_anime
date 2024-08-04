@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const animes = [
+	{
+		titulo: "Cha Hae-in",
+		img: "/imagenes/chahaein.png",
+		contenido: `Cha es una atractiva joven de ojos grises y cabello rubio en un
+			corte bob. Es de baja estatura, de complexión delgada y pecho
+			grande. Por lo general, usa una armadura de temática roja en las
+			incursiones y lleva una espada negra con una empuñadura plateada. Al
+			usar sus habilidades, sus ojos brillan de color amarillo. Cha se
+			muestra bastante seria y tranquila, preocupándose por la vida de los
+			demás, lo que combinado con su naturaleza meticulosa hace que
+			desarrolle el hábito de patrullar alrededor de la guarida del jefe
+			para asegurarse de que los trabajadores de su gremio no sufran
+			daños.`,
+	},
+	{
+		titulo: "Choi Jong-I",
+		img: "/imagenes/Choi.png",
+		contenido: `Choi es un joven larguirucho con cabello rojo en un peinado de cortina que se divide sobre el
+                        lado
+                        izquierdo de su ojo derecho. También tiene una sonrisa muy amable y tiende a usar trajes de
+                        negocios
+                        a rayas. Al usar sus poderes, sus ojos brillan de color magenta brillante. En las incursiones,
+                        vestía un traje de color marrón dorado y blanco con una capa roja fluida y un juego de ocho
+                        anillos. Choi es una persona astuta y amigable que no flaquea fácilmente bajo presión y se da
+                        cuenta
+                        rápidamente de las cosas.`,
+	},
+
+	{
+		titulo: "Sung Jin-Woo",
+		img: "/imagenes/Sung.jpg",
+		contenido: `un cazador débil y despreciado en un mundo donde existen portales que conectan nuestra realidad
+                        con
+                        dimensiones llenas de monstruos y criaturas sobrenaturales. Sin embargo, la vida de Sung Jin-Woo
+                        cambia drásticamente cuando es invitado a formar parte de los Cazadores, un grupo selecto de
+                        individuos con habilidades especiales que luchan contra estas amenazas.A medida que avanza la
+                        trama,
+                        Sung Jin-Woo descubre un poder oculto dentro de él que lo convierte en el cazador más fuerte de
+                        todos.`,
+	},
+	{
+		titulo: "Thomas Andre",
+		img: "/imagenes/thomas.jpg",
+		contenido: `Thomas era hijo de una familia pobre de inmigrantes europeos y pasó su infancia rodeado de
+                        enemigos.
+                        Para sobrevivir en un entorno tan duro, se convirtió en un luchador y demostró su talento
+                        natural
+                        para la dominación repetidamente a través de una serie interminable de peleas con aquellos lo
+                        suficientemente estúpidos como para oponerse a él. Años más tarde, cuando se descubrió la
+                        existencia
+                        de las bestias mágicas, Thomas aprovechó la oportunidad para convertirse en un verdadero rey y
+                        los
+                        gobernantes le otorgaron el poder, y finalmente se convirtió en uno de los cazadores más fuertes
+                        del
+                        mundo.`,
+	},
+	{
+		titulo: "Iron-Shadow",
+		img: "/imagenes/iron.jpeg",
+		contenido: `Iron sigue su aparición en la vida, vistiendo la misma armadura y empuñando las mismas armas.
+                        Como sombra, también tiene un brillo violeta claro. Cuando evolucionó a Elite Knight Grade, su
+                        hacha se hizo más grande y adquirió una calidad ahumada. El hierro es un cañón suelto y tiende a
+                        caer por la borda en la batalla, causando generalmente una destrucción excesiva con sus
+                        travesuras. También se enorgullece de sus asesinatos y se frustra fácilmente cuando sus
+                        oponentes demuestran ser inmunes a los suyos Burla habilidad. Aunque Jinwoo considera a Iron
+                        como un tonto, todavía lo mantiene cerca, ya que este último siempre hace bien el trabajo en la
+                        batalla`,
+	},
+	{
+		titulo: "Igris",
+		img: "imagenes/arise.jpg",
+		contenido: `Igris es un caballero grande con una armadura de color negro azabache de color púrpura claro que
+                        lo cubre de pies a cabeza, una capa negra andrajosa y un largo adorno rojo parecido a un cabello
+                        que se extiende desde la parte posterior de su casco. Su ojo izquierdo todavía muestra la
+                        cicatriz de Jinwoo durante su batalla. gris es leal, respetuoso y caballeroso, hasta el punto de
+                        que tiende a arrodillarse ante su maestro cada vez que termina una batalla por él. Un chiste
+                        recurrente con su personaje es que siempre devuelve la cabeza de sus muertes Jinwoo, lo que
+                        finalmente se convirtió en un problema cuando Hierro empezó a copiarlo. Al igual que Jinwoo,
+                        Igris tampoco aprueba las tontas travesuras de Iron y, por lo general, se irrita cada vez que
+                        Iron se excede en la batalla.`,
+	},
+];
+---
+
+<Layout title="Welcome to Astro.">
+	<section class="container-card">
+		{
+			animes.map((anime) => (
+				<Card
+					titulo={anime.titulo}
+					img={anime.img}
+					contenido={anime.contenido}
+				/>
+			))
+		}
+	</section>
+</Layout>
+
+<style>
+	.container-card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+		padding-bottom: 5%;
+		margin-top: 20px;
+		width: 100%;
+	}
+</style>
