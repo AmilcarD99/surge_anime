@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardHabilidades from "../../components/CardHabilidades.astro";
+import { personajes } from "../../tools/personajes";
+---
+
+<Layout title="habilidades">
+    <section class="animate-fade-in animate-duration-1000">
+        <hgroup class="flex justify-center">
+            <h1
+                class="text-4xl font-bold text-center mt-5 logo uppercase border-b-black border-b-2"
+            >
+                habilidades
+            </h1>
+        </hgroup>
+
+        <section class="flex gap-4 flex-wrap justify-center mt-4 p-4">
+            {
+                personajes.map((personaje) => (
+                    <CardHabilidades
+                        img={personaje.img}
+                        habilidades={personaje.poderes}
+                        nombre={personaje.personaje}
+                    />
+                ))
+            }
+        </section>
+    </section>
+</Layout>
