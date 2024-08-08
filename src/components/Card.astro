@@ -2,7 +2,9 @@
 const { titulo, img, contenido } = Astro.props;
 ---
 
-<div class="carta animate-fade-in animate-duration-1000">
+<div
+	class="animate-fade-in animate-duration-1000 w-full md:w-[30%] rounded-xl shadow-xl cursor-pointer bg-[#ffffdd] overflow-hidden"
+>
 	<figure>
 		<img src={img} />
 	</figure>
@@ -25,12 +27,12 @@ const { titulo, img, contenido } = Astro.props;
 			overflow: hidden;
 		}
 
-		.carta img:hover {
+		img:hover {
 			scale: 1.1;
 			transition: all 1000ms;
 		}
 
-		.carta img {
+		img {
 			width: 100%;
 			border-radius: 10px;
 		}
