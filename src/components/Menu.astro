@@ -1,10 +1,27 @@
 <header class="sticky top-0 z-10 p-5 backdrop-blur-lg opacity-back">
-    <nav class="flex justify-between">
-        <h1 class="logo">レベリングのみ</h1>
-        <ul>
-            <li><a href="/" class="permanent-marker-regular">HOME</a></li>
-            <li><a href="/info/historia">HISTORIA</a></li>
-            <li><a href="/info/habilidades">HABILIDADES</a></li>
+    <nav
+        class="flex flex-col md:flex-row md:justify-between items-center gap-5"
+    >
+        <h1 class="logo mb-1">レベリングのみ</h1>
+        <ul class="flex flex-col md:flex-row gap-4 items-center">
+            <li>
+                <a
+                    href="/"
+                    class="permanent-marker-regular p-4 rounded-xl hover:bg-gray-600"
+                    >HOME</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/info/historia"
+                    class="p-4 rounded-xl hover:bg-gray-600">HISTORIA</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/info/habilidades"
+                    class="p-4 rounded-xl hover:bg-gray-600">HABILIDADES</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -14,6 +31,9 @@
         font-family: "Permanent Marker", cursive;
         font-weight: 400;
         font-style: normal;
+    }
+    .sin-scroll::-webkit-scrollbar {
+        width: 0;
     }
 
     main {
@@ -47,10 +67,6 @@
         padding-right: 5%;
         font-weight: bold;
         background-color: #ffffdd;
-    }
-    nav li {
-        display: inline-block;
-        padding: 0px 20px;
     }
 
     nav li a {

@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Hisatoria">
-    <section class="Historia">
+    <section class="Historia animate-fade-in animate-duration-1000">
         <h3 class="title">Historia</h3>
         <div>
             <article class="texto">
@@ -31,13 +31,19 @@ import Layout from "../../layouts/Layout.astro";
                     que es todo menos poderoso, arriesga su vida en incursiones tratando
                     solamente de mantenerse con vida.
                 </p>
-                <section>
+                <section class="flex flex-col md:flex-row gap-3 justify-center">
                     <video
                         src="/videos/sololevelingtraileroficial.mp4"
                         controls
+                        class="w-full md:w-[50%]"
                     >
                     </video>
-                    <video src="/videos/leveling.mp4" controls> </video>
+                    <video
+                        src="/videos/leveling.mp4"
+                        controls
+                        class="w-full md:w-[50%]"
+                    >
+                    </video>
                 </section>
             </article>
         </div>
@@ -71,14 +77,5 @@ import Layout from "../../layouts/Layout.astro";
         color: black;
         -webkit-text-stroke-color: #ffffdd;
         -webkit-text-stroke-width: 1px;
-    }
-    video {
-        position: relative;
-        border-radius: 6px;
-        width: 50%;
-    }
-    article section {
-        display: flex;
-        gap: 20px;
     }
 </style>
