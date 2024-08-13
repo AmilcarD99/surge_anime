@@ -1,5 +1,6 @@
 ---
 import Menu from "../components/Menu.astro";
+import Menu2 from "../components/Menu2.astro";
 interface Props {
 	title: string;
 }
@@ -15,17 +16,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<title>{title}</title>
 	</head>
 	<body>
-		<Menu />
+		<!--<Menu />-->
+		<Menu2 />
 		<slot />
 	</body>
 </html>
 <style is:global>
-	
-
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -58,9 +58,9 @@ const { title } = Astro.props;
 			monospace;
 	}
 	.logo {
-        font-family: "Times New Roman", Times, serif;
-        text-shadow: 3px 3px blue;
-        -webkit-text-stroke-color: #bbb5b5;
-        -webkit-text-stroke-width: 1px;
-    }
+		font-family: "Times New Roman", Times, serif;
+		text-shadow: 3px 2px blue;
+		-webkit-text-stroke-color: #a7a4a4;
+		-webkit-text-stroke-width: 1px;
+	}
 </style>
