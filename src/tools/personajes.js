@@ -148,8 +148,8 @@ export const personajes = [
                 descripcion: ' Choi puede moverse a grandes velocidades, como lo demuestra la forma en que pudo esquivar por poco la visión de calor de la Estatua de Dios.'
             },
             {
-                poder: ' Choi puede moverse a grandes velocidades, como lo demuestra la forma en que pudo esquivar por poco la visión de calor de la Estatua de Dios.',
-                descripcion: 'Choi tiene una enorme reserva de maná, que supera a la mayoría de los personajes, que se muestra en su capacidad para mantener una gran potencia de fuego durante toda la incursión de la isla de Jeju'
+                poder: 'Velocidad mejorada',
+                descripcion: 'Choi puede moverse a grandes velocidades, como lo demuestra la forma en que pudo esquivar por poco la visión de calor de la Estatua de Dios.'
             },
             {
                 poder: 'Lanza de fuego',
